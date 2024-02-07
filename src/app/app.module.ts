@@ -19,6 +19,9 @@ import { CircleLinkComponent } from './components/circle-link/circle-link.compon
 import { ButtonLinkComponent } from './components/button-link/button-link.component';
 import { appReducer } from './store/default/default.reducers';
 import { AppEffects } from './store/default/default.effects';
+import { CreateComponent } from './components/create/create.component';
+import { PlayComponent } from './components/play/play.component';
+import { DetailsComponent } from './components/details/details.component';
 
 const mat = [
   MatCardModule,
@@ -34,6 +37,9 @@ const mat = [
     MainComponent,
     ButtonLinkComponent,
     CircleLinkComponent,
+    CreateComponent,
+    PlayComponent,
+    DetailsComponent,
   ],
   imports: [
     BrowserModule,
