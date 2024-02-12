@@ -1,9 +1,10 @@
 {
   "name": "cp",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "npm --no-git-tag-version version patch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -23,6 +24,7 @@
     "@angular/router": "^16.0.0",
     "@ngrx/effects": "^16.0.1",
     "@ngrx/store": "^16.0.1",
+    "@types/node": "^20.11.17",
     "bootstrap": "^5.3.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

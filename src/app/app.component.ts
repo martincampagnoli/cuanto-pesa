@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { environment } from '../environments/environment';
 
 /**
  * The root component of the Angular application.
@@ -12,5 +13,6 @@ export class AppComponent {
   /**
    * The title of the application.
    */
-  title = 'assessment';
+  title = '¿Cuánto pesa?';
+  version = environment.appVersion;
 }
