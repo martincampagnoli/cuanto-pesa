@@ -8,7 +8,7 @@
           <input
             matInput
             placeholder="Elegí algo original"
-            formControlName="firstCtrl"
+            formControlName="gameTitle"
             required
           />
         </mat-form-field>
@@ -19,15 +19,12 @@
     </mat-step>
     <mat-step [stepControl]="secondFormGroup">
       <form [formGroup]="secondFormGroup">
-        <ng-template matStepLabel>Definí cuanto pesa</ng-template>
+        <ng-template matStepLabel
+          >Definí cuanto pesa (o agregalo después)</ng-template
+        >
         <mat-form-field>
           <mat-label>Kgs con 1 decimal</mat-label>
-          <input
-            matInput
-            formControlName="secondCtrl"
-            placeholder="Ej: 15.5"
-            required
-          />
+          <input matInput formControlName="target" placeholder="Ej: 15.5" />
         </mat-form-field>
         <div>
           <button mat-button matStepperNext>Siguiente</button>
@@ -36,12 +33,14 @@
     </mat-step>
     <mat-step>
       <ng-template matStepLabel>Listo!</ng-template>
-      <p>
-        Listo! Guardá el link privado para terminar el juego y compartí el
-        público con tus amigos!
-      </p>
-      <a href="/details/123"> "LINK privado"</a>
-      <a href="/play/123">"LINK publico"</a>
+      <div class="alert alert-danger" role="alert">
+        Guardá el link privado para terminar el juego <br />
+        <a href="/details/123"> "LINK privado"</a>
+      </div>
+      <div class="alert alert-primary" role="alert">
+        Compartí el público con tus amigos!<br />
+        <a href="/play/123">"LINK publico"</a>
+      </div>
     </mat-step>
   </mat-stepper>
 </div>
